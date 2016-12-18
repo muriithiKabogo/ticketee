@@ -612,3 +612,107 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 79ms (Views: 38.0ms | ActiveRecord: 1.9ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2016-12-18 10:26:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 892ms (Views: 842.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2016-12-18 10:26:18 +0000
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 174ms (Views: 148.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2016-12-18 10:27:36 +0000
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GCu/8uK2WJbmvpXKmZzHmwOS/zE/8iPc//PTUidgN8/Cjkt1smwnd0Kxa+4bd1/iE+YmEX9z7jw0b53oIaiBuA==", "project"=>{"name"=>"ClaimSync", "description"=>"Easy and convenient way to get your health claims"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "ClaimSync"], ["description", "Easy and convenient way to get your health claims"], ["created_at", 2016-12-18 10:27:36 UTC], ["updated_at", 2016-12-18 10:27:36 UTC]]
+  [1m[35m (148.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 186ms (ActiveRecord: 149.8ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2016-12-18 10:27:36 +0000
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 81ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2016-12-18 10:28:11 +0000
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2016-12-18 10:28:14 +0000
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 86ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2016-12-18 10:28:21 +0000
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NsxkWcjxo0YR0I4y3ba5//vBvg2oToBr0dF0u5crswnsaZDemCvcp7XfcBZfXSGG67VnLejPTYsaTToBkeMFfg==", "project"=>{"name"=>"d", "description"=>""}, "commit"=>"Create Project"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 84ms (Views: 73.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2016-12-18 10:53:01 +0000
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXuyDTCEvtCi4zDW6BaCr2pidjKGA0vB5WyYzUhfo/+Hff7Hll/sPp66F/KnyFcAIc/qMY/aUB7RT/nGK10Mmw==", "project"=>{"name"=>"d", "description"=>""}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 76ms (Views: 51.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2016-12-18 10:54:06 +0000
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2016-12-18 10:54:09 +0000
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2016-12-18 10:54:15 +0000
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0yP+ddYLSP5YQL5v66oYC0ZQPyqTHvUJgP0fSnCYzW0JhgryhtE3H/xPQEtpQYByViTmCtOfOOlLYVHwdlB7Gg==", "project"=>{"name"=>"d", "description"=>""}, "commit"=>"Create Project"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 54ms (Views: 47.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2016-12-18 11:16:24 +0000
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aI7o2JSbYGSTmJUkgSYk5kK45P35ksL/n37mcgjnM4ieiKQSMkAyiq/BsgDO+PFJCRV4/vBL2SCrXYd5a+Wc7A==", "project"=>{"name"=>"", "description"=>""}, "commit"=>"Create Project"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 55ms (Views: 48.6ms | ActiveRecord: 0.7ms)
+
+
