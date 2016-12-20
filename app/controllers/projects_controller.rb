@@ -34,7 +34,16 @@ class ProjectsController < ApplicationController
 			redirect_to @project
 		else
 			flash.now[:notice]= "your project could not be updated"
-			rendr "edit"
+			render "edit"
+		end
+	end
+
+	def destroy
+		@project=Project.find(params[:id])
+		@project.destroy
+
+		flash[:notice]	= "project has been deleted"
+		redirect_to projects_path
 	end
 
 	private
